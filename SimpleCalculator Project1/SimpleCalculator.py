@@ -20,15 +20,15 @@ def divide(a, b):
 
 
 def calculator():
-    print("===== Simple Calculator =====")
-    print("Select an operation:")
-    print("1. Addition (+)")
-    print("2. Subtraction (-)")
-    print("3. Multiplication (*)")
-    print("4. Division (/)")
-    print("5. Exit")
 
     while True:
+        print("===== Simple Calculator =====")
+        print("Select an operation:")
+        print("1. Addition (+)")
+        print("2. Subtraction (-)")
+        print("3. Multiplication (*)")
+        print("4. Division (/)")
+        print("5. Exit")
         choice = input("\nEnter choice (1/2/3/4/5): ")
 
         if choice == "5":
