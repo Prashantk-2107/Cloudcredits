@@ -1,22 +1,26 @@
-tasks = [] # List to store tasks
+tasks_list = [] # List to store tasks
 
 def add_task(task):
     # Add the task at last in the list
-    tasks.append(task)
+    if not task.strip():
+        print("Cannot add an empty task.")
+        return
+    tasks_list.append(task)
     print(f'Task "{task}" added.')
 
 def list_tasks():
     # List all tasks with their index
-    if tasks:
-        print("Tasks:")
-        for i, task in enumerate(tasks, start=1):
+    if tasks_list:
+        print("\nTasks:")
+        for i, task in enumerate(tasks_list, start=1):
             print(f" {i}. {task}")
     else:
         print("No tasks found.")
+
 def remove_task(index):
     # Remove the task from the list if it exists using the index
-    if 0 <= index < len(tasks):
-        removed_task = tasks.pop(index)
+    if 0 <= index < len(tasks_list):
+        removed_task = tasks_list.pop(index)
         print(f'Task "{removed_task}" removed.')
     else:
         print(f'Invalid task index: {index}')
@@ -37,13 +41,16 @@ def main():
             add_task(task)
         elif choice == '2':
             # If task list is empty, notify user
-            if not tasks:
+            if not tasks_list:
                 print("No tasks to remove.")
                 continue
             # Show tasks and ask for index to remove
             list_tasks()
-            task = input("Enter the task number to remove: ")
-            remove_task(int(task) - 1)
+            try:
+                task = input("Enter the task number to remove: ")
+                remove_task(int(task) - 1)
+            except ValueError:
+                print("Invalid input. Please enter a number.")
         elif choice == '3':
             # List all tasks with their index
             list_tasks()
