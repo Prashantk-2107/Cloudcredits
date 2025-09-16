@@ -23,7 +23,7 @@ def remove_task(index):
         removed_task = tasks_list.pop(index)
         print(f'Task "{removed_task}" removed.')
     else:
-        print(f'Invalid task index: {index}')
+        print(f'Invalid task index: {index + 1}')
 
 def main():
     while True:
