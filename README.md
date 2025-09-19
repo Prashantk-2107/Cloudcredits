@@ -1,2 +1,0 @@
-# Cloudcredits
-Projects For Internship
