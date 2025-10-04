@@ -3,7 +3,7 @@ import time
 import winsound  # Windows built-in sound library
 
 def set_alarm():
-    print("===== Alarm Clock 🕒 =====")
+    print("---Alarm Clock---")
     alarm_time = input("Enter alarm time (HH:MM:SS, 24-hour format): ")
 
     try:
