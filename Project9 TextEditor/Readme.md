@@ -29,7 +29,7 @@ It allows users to create, open, edit, and save text files easily — just like 
 6. Exit: Prompts you to save changes before closing.
 
 ## Keyboard Shortcuts
-###    Shortcut	    Action
+###    Shortcuts
     Ctrl + N	    New File
     Ctrl + O	    Open File
     Ctrl + S	    Save File
